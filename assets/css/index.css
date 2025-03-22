@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    font-style: normal;
+}
+html{
+    font-size: 62.5%;
+    background-color: #faf6eb;  
+}
+
+body{
+}
+
+header{
+    background: #f4db27;
+    text-align: center;
+    color: white;
+    font-weight: 700px;
+    font-style: italic;
+    font-size: 2rem;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.note{
+    padding: 2rem;
+}
+
+.note__area{
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.note__title{
+
+}
+
+.note__content{
+    padding: 2rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
