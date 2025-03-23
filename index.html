@@ -30,7 +30,10 @@
             </h1>
             <p class="note__content">
                 1. Dữ liệu nguyên thủy(Primitive Data) <br>
-                - Number <br>
+                - Number<br>
+                <b>isNaN()</b> để kiểm tra đối tượng <b>không</b> phải là số <br>
+                <b>.toString()</b> để chuyển Number thành String <br>
+                <b>.toFixed()</b> để làm tròn Number, nhận tham số truyền vào là số thập phân muốn làm gọn tới<br><br>
                 - String <br>
                 - Boolean <br>
                 - Undefined <br>
@@ -66,7 +69,7 @@
             <p class="note__content">
                 <b>Prefix(++a, --a) & Postfix(a++, a--)</b><br>
                 <b>* Prefix</b>: Thực hiện phép tính tiền tố(+1, -1) trước -> rồi mới lấy giá trị a làm các hành động sau. <br>
-                <b>* Postfix</b>: Lấy giá trị ban đầu của a thực hiện các hành động trước -> rồi mới thực hiện phép tính hâuk tố(+1, -1). <br><br>
+                <b>* Postfix</b>: Lấy giá trị ban đầu của a thực hiện các hành động trước -> rồi mới thực hiện phép tính hậu tố(+1, -1). <br><br>
                 <b>Ex:</b> var a = 5; <br>
                 var b = a++ + --a;<br>
                 -> b = 6 + 6 = 12
@@ -87,6 +90,30 @@
             </h1>
             <p class="note__content">
                 <strong>&&, ||, !</strong>
+            </p>
+        </div>
+
+        <div class="note__area">
+            <h1 class="note__title">⭐ Mảng(Array)
+            </h1>
+            <p class="note__content">
+                var languages = ["JS", "C++", "C#", 123, undefined, function(){}, null, ...]; <br><br>
+
+                - Nội dung trong [] gọi là các "phần tử" của mảng languages <br>
+                - Các phần tử của mảng có thể là bất kì kiểu dữ liệu nào <br>
+                <b>Các phương thức hay dùng với array:</b> <br>
+                1. Array.<b>isArray</b>(languages) để kiểm tra biến có phải array không<br>
+                2. languages.<b>length</b> để kiểm tra mảng có bao nhiêu phần tử <br>
+                3. languages.<b>[n]</b> lấy ra phần tử thứ n <br>
+                4. languages.<b>toString</b> chuyển Array thành String <br>
+                5. languages.<b>join('--')</b> chuyển Array thành String và ngăn cách các phần tử bằng -- <br>
+                6. languages.<b>pop()</b> xóa phần tử <b>cuối</b> mảng và trả ra phần tử đó, khi hết phần tử thì trả về undefined <br>
+                7. languages.<b>shift()</b> xóa phần tử <b>đầu</b> mảng và trả ra phần tử đó, khi hết phần tử thì trả về undefined <br>
+                8. languages.<b>unshift()</b> thêm 1 hoặc nhiều phần tử vào <b>đầu</b> mảng <br>
+                9. languages.<b>push()</b> thêm 1 hoặc nhiều phần tử vào <b>cuối</b> mảng, tăng độ dài mảng <br>
+                10. languages.<b>splice(index, số phần tử muốn xóa, phần tử muốn chèn)</b> dùng để xóa(input 2 tham số), chèn(input 3 tham số) phần tử bất kì nếu đã xác định được index <br>
+                11. languages.<b>concat(languages2)</b> nối mảng languages2 vào languages <br>
+                12. languages.<b>slice(index, số phần tử muốn cắt)</b> cắt 1 or nhiều phần tử, có thể cắt từ cuối lên bằng cách truyền số âm. Ngoài ra có thể truyền 0 để copy toàn bộ các phần tử của mảng </b>
             </p>
         </div>
     </div>
