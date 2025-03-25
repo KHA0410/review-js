@@ -1,3 +1,8 @@
+:root{
+    --color-primary: #f4db27;
+    --color-seconary: #faf6eb
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,14 +12,14 @@
 }
 html{
     font-size: 62.5%;
-    background-color: #faf6eb;  
+    background-color: var(--color-seconary);  
 }
 
 body{
 }
 
 header{
-    background: #f4db27;
+    background: var(--color-primary);
     text-align: center;
     color: white;
     font-weight: 700px;
@@ -33,9 +38,15 @@ header{
 
 .note__area{
     padding: 1rem;
-    border: 2px solid black;
+    border: 0.3rem solid gray;
     border-radius: 1rem;
     margin-bottom: 2rem;
+    transition: 0.3s ease-in-out;
+
+}
+
+.note__area:hover{
+    border: 0.3rem solid black;
 }
 
 .note__title{
@@ -44,6 +55,6 @@ header{
 
 .note__content{
     padding: 2rem;
-    line-height: 2rem;
-    font-size: 1.2rem;
+    line-height: 3rem;
+    font-size: 1.3rem;
 }

@@ -80,8 +80,8 @@
             <h1 class="note__title">⭐ Toán tử so sánh(Comparison)
             </h1>
             <p class="note__content">
-                <strong>==, !=, >, &lt;, >=, &lt;=</strong>
-
+                <strong>==, !=, >, &lt;, >=, &lt;=</strong> Chỉ so sánh value(1 == '1' => true) <br>
+                <strong>===, !==</strong> So sánh cả value và datatype(1 == '1' => false)
             </p>
         </div>
 
@@ -89,7 +89,55 @@
             <h1 class="note__title">⭐ Toán tử logic(Logical)
             </h1>
             <p class="note__content">
-                <strong>&&, ||, !</strong>
+                <strong>&&, ||, !</strong><br><br>
+                <b>&&</b>: var result = 'a' && 'b' && 'null' && 'c' => result = null (đọc từ trái qua nếu phát hiện <b>falsy</b> thì return)<br>
+                <b>||</b>: var result = 'a' && 0 && 'null' && 'c' => result = a (đọc từ trái qua nếu phát hiện <b>truthy</b> thì return)
+
+            </p>
+        </div>
+
+        <div class="note__area">
+            <h1 class="note__title">⭐ Falsy
+            </h1>
+            <p class="note__content">
+                1. false <br>
+                2. 0 <br>
+                3. '' or "" //r  ỗng<br>
+                4. null <br>
+                5. undefined <br>
+                6. NaN <br>
+                <b>Note:</b> [] hay {} không phải là rỗng nên sẽ là truthy, chuỗi '0' là truthy
+            </p>
+        </div>
+
+        <div class="note__area">
+            <h1 class="note__title">⭐ Hàm (Function)</h1>
+            <p class="note__content">
+                <strong>Có 2 loại là hàm built-in(được js định nghĩa sẳn) và hàm tự định nghĩa</strong> <br>
+                <b>Note:</b><br>
+                - Phải gọi thì hàm mới thực thi <br>
+                - Có thể nhận tham số <br>
+                - Có thể trả về 1 giá trị <br>
+                - Tham số và đối số có thể là bất kể kiểu dữ liệu nào <br>
+                - Tham số của hàm có tính private nên chỉ dùng được bên trong hàm đó <br>
+                - Nếu truyền thiếu đối số hàm vẫn chạy nhưng tham số bị thiếu sẽ là undefined <br>
+                <br>
+                <u><b>Structure:</b></u><br>
+                function <b>sum(tham số 1, 2,...)</b>{<br>
+                    Các câu lệnh cần thực thi <br>
+                } <br>
+                - Gọi hàm để thực thi các câu lệnh <br>
+                <b>sum(đối số1, 2, ...)</b><br>
+                <br>
+                <u><b>Arguments</b></u><br>
+                <i style="font-style: italic !important;">Tại sao các hàm như console.log() lại có thể truyền vô số đối số, chẳng lẽ js định nghĩa sẳn ư ?</i><br>
+                <b>Ex:</b><br>
+                function writeLog(){<br>
+                    console.log(arguments) => ['log1', 'log2', 'log3']<br>
+                } <br>
+                writeLog('log1', 'log2', 'log3') <br> <br>
+                <b><u>Return</u></b><br>
+                Hàm không dùng return, kết quả sai sẽ cho ra undefined <br>
             </p>
         </div>
 
@@ -116,6 +164,7 @@
                 12. languages.<b>slice(index, số phần tử muốn cắt)</b> cắt 1 or nhiều phần tử, có thể cắt từ cuối lên bằng cách truyền số âm. Ngoài ra có thể truyền 0 để copy toàn bộ các phần tử của mảng </b>
             </p>
         </div>
+
     </div>
 <script src="./assets/js/main.js"></script>
 </body>
