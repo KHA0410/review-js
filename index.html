@@ -34,7 +34,12 @@
                 <b>isNaN()</b> để kiểm tra đối tượng <b>không</b> phải là số <br>
                 <b>.toString()</b> để chuyển Number thành String <br>
                 <b>.toFixed()</b> để làm tròn Number, nhận tham số truyền vào là số thập phân muốn làm gọn tới<br><br>
-                - String <br>
+                - String (chuỗi)<br>
+                + Sử dụng backslash <b>\</b> , <b>`${chuỗi}`</b><br>
+                + Dùng <b>.length</b> để kiểm tra độ dài chuỗi <br>
+                + myString<b>.indexOf</b>("string tìm") tìm vị trí trái qua, có thể truyền vào index bắt đầu tìm
+                + myString<b>.lastIndexOf()</b> tìm vị trí từ phải qua trái <br>
+                + myString<b>.slice</b>(index start, index end) cắt chuỗi <br>
                 - Boolean <br>
                 - Undefined <br>
                 - Null <br>
@@ -81,7 +86,7 @@
             </h1>
             <p class="note__content">
                 <strong>==, !=, >, &lt;, >=, &lt;=</strong> Chỉ so sánh value(1 == '1' => true) <br>
-                <strong>===, !==</strong> So sánh cả value và datatype(1 == '1' => false)
+                <strong>===, !==</strong> So sánh cả value và datatype(1 === '1' => false)
             </p>
         </div>
 
@@ -92,7 +97,6 @@
                 <strong>&&, ||, !</strong><br><br>
                 <b>&&</b>: var result = 'a' && 'b' && 'null' && 'c' => result = null (đọc từ trái qua nếu phát hiện <b>falsy</b> thì return)<br>
                 <b>||</b>: var result = 'a' && 0 && 'null' && 'c' => result = a (đọc từ trái qua nếu phát hiện <b>truthy</b> thì return)
-
             </p>
         </div>
 
@@ -139,6 +143,18 @@
                 <b><u>Return</u></b><br>
                 Hàm không dùng return, kết quả sai sẽ cho ra undefined <br>
             </p>
+            <h1 class="title">⭐ Các loại hàm</h1>
+            <p class="note__content">
+                - Declaration function (có cơ chế hosting)<br>
+                <b>function countNumber(){}</b> <br>
+                - Expresstion function<br>
+                <b>var countNumber = function(){}</b> <br>
+                - Arrow function <br>
+                <b>var countNumber = () => {}</b> <br>
+                function count (){}
+                var count = function () {}
+                var count = () => {} <br>
+                <b>Note: </b>Cơ chế hosting là gọi hàm trc cả khi nó được định nghĩa
         </div>
 
         <div class="note__area">
