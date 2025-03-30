@@ -31,15 +31,7 @@
             <p class="note__content">
                 1. Dữ liệu nguyên thủy(Primitive Data) <br>
                 - Number<br>
-                <b>isNaN()</b> để kiểm tra đối tượng <b>không</b> phải là số <br>
-                <b>.toString()</b> để chuyển Number thành String <br>
-                <b>.toFixed()</b> để làm tròn Number, nhận tham số truyền vào là số thập phân muốn làm gọn tới<br><br>
-                - String (chuỗi)<br>
-                + Sử dụng backslash <b>\</b> , <b>`${chuỗi}`</b><br>
-                + Dùng <b>.length</b> để kiểm tra độ dài chuỗi <br>
-                + myString<b>.indexOf</b>("string tìm") tìm vị trí trái qua, có thể truyền vào index bắt đầu tìm
-                + myString<b>.lastIndexOf()</b> tìm vị trí từ phải qua trái <br>
-                + myString<b>.slice</b>(index start, index end) cắt chuỗi <br>
+                - String<br>
                 - Boolean <br>
                 - Undefined <br>
                 - Null <br>
@@ -49,6 +41,32 @@
                 2. Dữ liệu phức tạp <br>
                 - Function <br>
                 - Object
+            </p>
+        </div>
+
+        <div class="note__area">
+            <h1 class="note__title">⭐ Number</h1>
+            <p class="note__content">
+                <b>isNaN()</b> để kiểm tra đối tượng <b>không</b> phải là số <br>
+                <b>.toString()</b> để chuyển Number thành String <br>
+                <b>.toFixed()</b> để làm tròn Number, nhận tham số truyền vào là số thập phân muốn làm gọn tới<br>
+            </p>
+        </div>
+
+        <div class="note__area">
+            <h1 class="note__title">⭐ String</h1>
+            <p class="note__content">
+                + Sử dụng backslash <b>\</b> , <b>`${chuỗi}`</b><br>
+                + Dùng <b>.length</b> để kiểm tra độ dài chuỗi <br>
+                + myString<b>.indexOf</b>("string tìm") tìm vị trí trái qua, có thể truyền vào index bắt đầu tìm <br>
+                + myString<b>.lastIndexOf()</b> tìm vị trí từ phải qua trái <br>
+                + myString<b>.slice</b>(index start, index end) cắt chuỗi <br>
+                + myString<b>.replace</b>("chuỗi cần tìm", "chuỗi cần thay thế") tìm và thay thế trong chuỗi, <b>/chuỗi cần tìm/g</b> đây là biểu thức chính quy tìm tất cả phần tử giống chuỗi cần tìm và thay thế <br>
+                + myString<b>.toUpperCase()</b> chuyển tất cả chữ trong chuỗi thành chữ <b>hoa</b> <br>
+                + myString<b>.toLowerCase()</b> chuyển tất cả chữ trong chuỗi thành chữ <b>thường</b> <br>
+                + myString<b>.trim()</b> xóa bỏ khoảng các đầu cuối của chuỗi <br>
+                + myString<b>.split</b>() cắt string thành array dựa vào điểm chung, nếu truyền chuỗi rỗng sẽ cắt từng chữ cái thành array<br>
+
             </p>
         </div>
 
@@ -75,7 +93,7 @@
                 <b>Prefix(++a, --a) & Postfix(a++, a--)</b><br>
                 <b>* Prefix</b>: Thực hiện phép tính tiền tố(+1, -1) trước -> rồi mới lấy giá trị a làm các hành động sau. <br>
                 <b>* Postfix</b>: Lấy giá trị ban đầu của a thực hiện các hành động trước -> rồi mới thực hiện phép tính hậu tố(+1, -1). <br><br>
-                <b>Ex:</b> var a = 5; <br>
+                <b>Ex:</b> var a = 6; <br>
                 var b = a++ + --a;<br>
                 -> b = 6 + 6 = 12
             </p>
@@ -151,9 +169,7 @@
                 <b>var countNumber = function(){}</b> <br>
                 - Arrow function <br>
                 <b>var countNumber = () => {}</b> <br>
-                function count (){}
-                var count = function () {}
-                var count = () => {} <br>
+                <br>
                 <b>Note: </b>Cơ chế hosting là gọi hàm trc cả khi nó được định nghĩa
         </div>
 
