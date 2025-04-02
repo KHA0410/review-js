@@ -95,5 +95,24 @@ console.log(student.lastName);  // 'Bui'
 console.log(student.getFullName());  // 'Long Bui'
 
 var date = new Date()
+let year = date.getFullYear();
+let month = date.getMonth() + 1;
+let day = date.getDate();
 
-console.log('date', date)
+console.log('hôm nay là ngày: ', `${day}/${month}/${year}` )
+
+var random = Math.floor(Math.random() * 100)
+console.log(random)
+if(random <= 5){
+    console.log("Cường hóa thành công")
+}
+else{
+    console.log("Cường hóa thất bại") 
+}
+
+let getRandomItem = function(arr){
+    let randomArr = Math.floor(Math.random() * arr.length)
+    return arr[randomArr]
+}
+let schoolName = ["A", "B", "C", "D"]
+console.log("Trường ",getRandomItem(schoolName) + " thắng")

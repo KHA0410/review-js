@@ -134,9 +134,9 @@
                 Object constructure giống như là 1 bảng thiết kế sẳn từ đó xây nên những object cho các đối tượng <br>
                 <br>
                 var User = function(name, age, email){ <br>
-                    this.name = name, <br>
-                    this.age = age, <br>
-                    this.email = email<br>
+                    this.name = name; <br>
+                    this.age = age; <br>
+                    this.email = email;<br>
                     this.getName = function(){} <br>
                 } <br>
                 var admin = new User("Kha", 23, "khanguyen@gmail.com"); <br>
@@ -148,7 +148,39 @@
                 <br>
                 Có thể dùng <b>prototype</b> để thêm thuộc tính cho obj constructor nhưng sẽ thuộc tính này sẽ không nhận các thuộc tính được truyền vào của các đối tượng lúc khởi tạo  <br>
                 User.prototype.className = "F8"
+                <br><br>
             </p>
+         </div>
+         <!-- Date Object -->
+          <div class="note__area">
+            <h1 class="note__title">⭐ Date Object</h1>
+            <p class="note__content">
+                var date = new Date() // nếu ko có new thì chỉ trả ra string vs ko thể truy suất phương thức của nó <br>
+                date.getFullYear() <br>
+                date.getMonth() + 1  //vì tháng từ 0-11 <br>
+                date.getDate() <br>
+            </p>
+          </div>
+          <!-- Math Object -->
+          <div class="note__area">
+            <h1 class="title">⭐ Math Object</h1>
+            <div class="note__content">
+                - Math.<b>PI</b> : trả về số pi đầy đủ <br>
+                - Math.<b>round()</b> : làm tròn số .49 thì thành 1 .5 thì thành 2 <br>
+                - Math.<b>abs()</b> : giá trị tuyệt đối <br>
+                - Math.<b>ceil()</b> : làm tròn lên 4,0001 thành 5 <br>
+                - Math.<b>floor()</b> : làm tròn dưới 4.9 thành 4 <br>
+                - Math.<b>random()</b> : 1 số thập phân ngẫu nhiên nhỏ hơn 1 <br>
+                Có thể kết hợp vs floor để random ra số ngẫu nhiên <br>
+                var random = Math.floor(Math.random() * 10) <br>
+                - Math.<b>min()</b> : in ra số nhỏ nhất <br>
+                - Math.<b>max()</b> : in ra số lớn nhất       
+            </div>
+          </div>
+        <!-- If-else -->
+         <div class="note__area">
+            <h1 class="note__title">⭐ If-else</h1>
+            <p class="note__content"></p>
          </div>
         <!-- Toán tử số học -->
         <div class="note__area">
