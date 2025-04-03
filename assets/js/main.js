@@ -116,3 +116,24 @@ let getRandomItem = function(arr){
 }
 let schoolName = ["A", "B", "C", "D"]
 console.log("Trường ",getRandomItem(schoolName) + " thắng")
+
+let readKey = function(key){
+    switch(key){
+        case "a":
+            console.log("Apple");
+            break;
+        case "s":
+            console.log("Samsung");
+            break;
+        case "n":
+            console.log("Nokia"); 
+            break;   
+        default:
+            console.log("Dont know")
+    }
+}
+
+readKey("n")
+
+var a = 1, b = 2;
+var c = a > b ? console.log(b) : console.log(a)
