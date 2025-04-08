@@ -137,3 +137,103 @@ readKey("n")
 
 var a = 1, b = 2;
 var c = a > b ? console.log(b) : console.log(a)
+
+
+// let getRandNumbers = function(min, max, length){
+//     var arr = [];
+
+//     for(var i = 0; i < length; i++){
+//        arr.push(Math.floor(Math.random() * (max - min) + min))
+//     }
+//     return arr
+// }
+
+// console.log(getRandNumbers(1, 10, 6))
+
+// function getTotal(arr) {
+//     var total = 0;
+//     for(var i = 0; i<arr.length; i++){
+//         total += arr[i]
+//     }
+//     return total;
+// }
+
+// console.log(getTotal([4, 5, 3, 5]))
+
+var orders = [
+    {
+        name: 'Khóa học HTML - CSS Pro',
+        price: 3000000
+    },
+    {
+        name: 'Khóa học Javascript Pro',
+        price: 2500000
+    },
+    {
+        name: 'Khóa học React Pro',
+        price: 3200000
+    }
+]
+let getTotal = function(orders){
+    let total = 0;
+    let ordersLength = orders.length;
+    for(var i = 0; i < ordersLength; i++){
+        total += orders[i].price;
+    }
+    return total;
+}
+
+
+// Expected results:
+console.log(getTotal(orders)) // Output: 8700000
+
+var person = {
+    name: "Kha",
+    age: 23,
+    phone: "0900909099"
+}
+
+var personArr = ["Kha", 23, "09090909"]
+
+// for(var key in person){
+//     console.log(key + ":" + person[key])
+// }
+
+// for(var key of personArr){
+//     console.log(key)
+// }
+
+var x = 0;
+while(x < personArr.length){
+    console.log(personArr[x]);
+    x++;
+}
+
+// var i = 0;
+// var isSuccess = false;
+// do{
+//     i++;
+//     console.log("Nạp thẻ lần: " + i)
+
+//     if(true){
+//         isSuccess = true
+//     }
+// }while(!isSuccess && i <= 3);
+
+// for(;i < 10; i++){
+
+//     if(i%2 !== 0){
+//         continue;
+//     }
+
+//     console.log(i)
+
+// }
+
+var arrNumber = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+for(var i = 0; i < arrNumber.length; i++){
+    for(var j = 0; j < arrNumber[i].length; j++){
+        console.log(arrNumber[i][j])
+    }
+}

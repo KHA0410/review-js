@@ -11,11 +11,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
     </style>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <h1>Review JS</h1>
     </header>
+
     <div class="note">
         <!-- Cách dùng JS với HTML -->
         <div class="note__area">
@@ -70,157 +73,6 @@
 
             </p>
         </div>
-        <!-- Array -->
-        <div class="note__area">
-            <h1 class="note__title">⭐ Array
-            </h1>
-            <p class="note__content">
-                var languages = ["JS", "C++", "C#", 123, undefined, function(){}, null, ...]; <br><br>
-
-                - Nội dung trong [] gọi là các "phần tử" của mảng languages <br>
-                - Các phần tử của mảng có thể là bất kì kiểu dữ liệu nào <br>
-                <b>Các phương thức hay dùng với array:</b> <br>
-                1. Array.<b>isArray</b>(languages) để kiểm tra biến có phải array không<br>
-                2. languages.<b>length</b> để kiểm tra mảng có bao nhiêu phần tử <br>
-                3. languages.<b>[n]</b> lấy ra phần tử thứ n <br>
-                4. languages.<b>toString</b> chuyển Array thành String <br>
-                5. languages.<b>join('--')</b> chuyển Array thành String và ngăn cách các phần tử bằng -- <br>
-                6. languages.<b>pop()</b> xóa phần tử <b>cuối</b> mảng và trả ra phần tử đó, khi hết phần tử thì trả về undefined <br>
-                7. languages.<b>shift()</b> xóa phần tử <b>đầu</b> mảng và trả ra phần tử đó, khi hết phần tử thì trả về undefined <br>
-                8. languages.<b>unshift()</b> thêm 1 hoặc nhiều phần tử vào <b>đầu</b> mảng <br>
-                9. languages.<b>push()</b> thêm 1 hoặc nhiều phần tử vào <b>cuối</b> mảng, tăng độ dài mảng <br>
-                10. languages.<b>splice(index, số phần tử muốn xóa, phần tử muốn chèn)</b> dùng để xóa(input 2 tham số), chèn(input 3 tham số) phần tử bất kì nếu đã xác định được index <br>
-                11. languages.<b>concat(languages2)</b> nối mảng languages2 vào languages <br>
-                12. languages.<b>slice(index, số phần tử muốn cắt)</b> Lấy ra 1 or nhiều phần tử, có thể cắt từ cuối lên bằng cách truyền số âm. Ngoài ra có thể truyền 0 để copy toàn bộ các phần tử của mảng </b>
-            </p>
-        </div>
-        <!-- Object -->
-        <div class="note__area">
-            <h1 class="note__title">⭐ Object</h1>
-            <p class="note__content">
-                Object được tạo nên từ 1 hoặc nhiều cặp <b>key</b> và <b>value</b>, hàm trong obj gọi là <b>phương thức(method)</b>, còn lại gọi là <b>thuộc tính(property)</b></b> <br>
-                var student{ <br>
-                    name: "Nguyễn A", <br>
-                    age: 15, <br>
-                    address: "HCM" <br>
-                } <br><br>
-                <b>- Cách thêm key vào obj</b> <br>
-                student.email = "nguyena@gmail.com"; <br>
-                hoặc <br>
-                student[my-email] = "nguyena@gmail.com"; <br>
-                hoặc nếu muốn thêm key là biến bên ngoài thì <br>
-                [emailKey]: "nguyenb@gmail.com"
-                <br><br>
-                <b>- Cách lấy value của key</b> <br>
-                student.name hoặc student["name"] <br><br>
-                <b>- Xóa key</b> <br>
-                delete student.name <br> <br>
-                <b>- Tạo phương thức bên trong object</b> <br>
-                var student{ <br>
-                    name: "Nguyễn A", <br>
-                    age: 15, <br>
-                    address: "HCM", <br>
-                    getName: function(){<br>
-                        return this.name //Dùng this vì tên obj có thể thay đổi<br>
-                    } <br>
-                } <br>
-                Để lấy được giá trị của phương thức: student.getName()
-            </p>
-        </div>
-        <!-- Object constructer-->
-         <div class="note__area">
-            <h1 class="note__title">⭐ Object constructure</h1>
-            <p class="note__content">
-                Object constructure giống như là 1 bảng thiết kế sẳn từ đó xây nên những object cho các đối tượng <br>
-                <br>
-                var User = function(name, age, email){ <br>
-                    this.name = name; <br>
-                    this.age = age; <br>
-                    this.email = email;<br>
-                    this.getName = function(){} <br>
-                } <br>
-                var admin = new User("Kha", 23, "khanguyen@gmail.com"); <br>
-                var user = new User("Nguyen", 20, "nguyennguyen@gmail.com"); <br>
-                <br>
-                <b>Có thể thêm property cho object mà ko sợ ảnh hưởng đến đối tượng khác</b> <br>
-                admin.title = "Đây là admin"; <br>
-                user.comment = "Hôm nay thời tiết tốt"; <br>
-                <br>
-                Có thể dùng <b>prototype</b> để thêm thuộc tính cho obj constructor nhưng sẽ thuộc tính này sẽ không nhận các thuộc tính được truyền vào của các đối tượng lúc khởi tạo  <br>
-                User.prototype.className = "F8"
-                <br><br>
-            </p>
-         </div>
-         <!-- Date Object -->
-          <div class="note__area">
-            <h1 class="note__title">⭐ Date Object</h1>
-            <p class="note__content">
-                var date = new Date() // nếu ko có new thì chỉ trả ra string vs ko thể truy suất phương thức của nó <br>
-                date.getFullYear() <br>
-                date.getMonth() + 1  //vì tháng từ 0-11 <br>
-                date.getDate() <br>
-            </p>
-          </div>
-          <!-- Math Object -->
-          <div class="note__area">
-            <h1 class="title">⭐ Math Object</h1>
-            <div class="note__content">
-                - Math.<b>PI</b> : trả về số pi đầy đủ <br>
-                - Math.<b>round()</b> : làm tròn số .49 thì thành 1 .5 thì thành 2 <br>
-                - Math.<b>abs()</b> : giá trị tuyệt đối <br>
-                - Math.<b>ceil()</b> : làm tròn lên 4,0001 thành 5 <br>
-                - Math.<b>floor()</b> : làm tròn dưới 4.9 thành 4 <br>
-                - Math.<b>random()</b> : 1 số thập phân ngẫu nhiên nhỏ hơn 1 <br>
-                Có thể kết hợp vs floor để random ra số ngẫu nhiên <br>
-                var random = Math.floor(Math.random() * 10) <br>
-                - Math.<b>min()</b> : in ra số nhỏ nhất <br>
-                - Math.<b>max()</b> : in ra số lớn nhất       
-            </div>
-          </div>
-        <!-- If-else -->
-         <div class="note__area">
-            <h1 class="note__title">⭐ If-else</h1>
-            <p class="note__content">
-                Chỉ cần 1 if thỏa mãn và thực thi thì sẽ ko làm những if còn lại <br>
-                <b>if</b>(điều kiện 1){ <br>
-                    câu lệnh 1 <br>
-                }<b>else if</b>(điều kiện 2){ <br>
-                    câu lệnh 2 <br>
-                }<b>else if</b>(điều kiện 3){<br>
-                    câu lệnh 3 <br>
-                }<b>else</b>{ <br>
-                    câu lệnh <br>
-                }
-            </p>
-         </div>
-        <!-- Switch -->
-        <div class="note__area"> 
-        <h1 class="note__title">⭐ Switch</h1>
-        <p class="note__content">
-            <b>switch</b>(điều kiện){ <br>
-                <b>case</b> điều kiện: <br>  
-                <b>break;</b> <br>
-                <b>case</b> điều kiện: <br>
-                <b>break;</b> <br>
-                <b>case</b> điều kiện: <br>
-                <b>break;</b>  <br>
-                <b>default:</b> <br>
-                câu lệnh; <br>
-            } <br>
-            - Nếu ko có break thì kể từ lúc case đúng các câu lệnh của các câu sau sẽ đều dc thực hiện <br>
-            - Câu lệnh default dùng cho các case còn lại <br>
-            - Nếu nhiều hơn 3 điều kiện có thể dùng switch case
-
-        </p>
-        </div>
-        <!-- Toán tử 3 ngôi -->
-         <div class="note__area">
-            <h1 class="note__title">⭐ Toán tử 3 ngôi(Ternary operator)</h1>
-            <p class="note__content">
-               var result = điều kiện <b>?</b> thực hiện nếu dk đúng 
-               <b>:</b> ngược lại thực hiện nếu điều kiện sai 
-            </p>
-         </div>
         <!-- Toán tử số học -->
         <div class="note__area">
             <h1 class="note__title">⭐ Toán tử số học(Arithmetic)
@@ -324,7 +176,295 @@
                 <br>
                 <b>Note: </b>Cơ chế hosting là gọi hàm trc cả khi nó được định nghĩa
         </div>
+        <!-- Array -->
+        <div class="note__area">
+            <h1 class="note__title">⭐ Array
+            </h1>
+            <p class="note__content">
+                var languages = ["JS", "C++", "C#", 123, undefined, function(){}, null, ...]; <br><br>
 
+                - Nội dung trong [] gọi là các "phần tử" của mảng languages <br>
+                - Các phần tử của mảng có thể là bất kì kiểu dữ liệu nào <br>
+                <b>Các phương thức hay dùng với array:</b> <br>
+                1. Array.<b>isArray</b>(languages) để kiểm tra biến có phải array không<br>
+                2. languages.<b>length</b> để kiểm tra mảng có bao nhiêu phần tử <br>
+                3. languages.<b>[n]</b> lấy ra phần tử thứ n <br>
+                4. languages.<b>toString</b> chuyển Array thành String <br>
+                5. languages.<b>join('--')</b> chuyển Array thành String và ngăn cách các phần tử bằng -- <br>
+                6. languages.<b>pop()</b> xóa phần tử <b>cuối</b> mảng và trả ra phần tử đó, khi hết phần tử thì trả về undefined <br>
+                7. languages.<b>shift()</b> xóa phần tử <b>đầu</b> mảng và trả ra phần tử đó, khi hết phần tử thì trả về undefined <br>
+                8. languages.<b>unshift()</b> thêm 1 hoặc nhiều phần tử vào <b>đầu</b> mảng <br>
+                9. languages.<b>push()</b> thêm 1 hoặc nhiều phần tử vào <b>cuối</b> mảng, tăng độ dài mảng <br>
+                10. languages.<b>splice(index, số phần tử muốn xóa, phần tử muốn chèn)</b> dùng để xóa(input 2 tham số), chèn(input 3 tham số) phần tử bất kì nếu đã xác định được index <br>
+                11. languages.<b>concat(languages2)</b> nối mảng languages2 vào languages <br>
+                12. languages.<b>slice(index, số phần tử muốn cắt)</b> Lấy ra 1 or nhiều phần tử, có thể cắt từ cuối lên bằng cách truyền số âm. Ngoài ra có thể truyền 0 để copy toàn bộ các phần tử của mảng </b>
+            </p>
+        </div>
+        <!-- Object -->
+        <div class="note__area">
+            <h1 class="note__title">⭐ Object</h1>
+            <p class="note__content">
+                Object được tạo nên từ 1 hoặc nhiều cặp <b>key</b> và <b>value</b>, hàm trong obj gọi là <b>phương thức(method)</b>, còn lại gọi là <b>thuộc tính(property)</b></b> <br>
+                var student{ <br>
+                    name: "Nguyễn A", <br>
+                    age: 15, <br>
+                    address: "HCM" <br>
+                } <br><br>
+                <b>- Cách thêm key vào obj</b> <br>
+                student.email = "nguyena@gmail.com"; <br>
+                hoặc <br>
+                student[my-email] = "nguyena@gmail.com"; <br>
+                hoặc nếu muốn thêm key là biến bên ngoài thì <br>
+                [emailKey]: "nguyenb@gmail.com"
+                <br><br>
+                <b>- Cách lấy value của key</b> <br>
+                student.name hoặc student["name"] <br><br>
+                <b>- Xóa key</b> <br>
+                delete student.name <br> <br>
+                <b>- Tạo phương thức bên trong object</b> <br>
+                var student{ <br>
+                    name: "Nguyễn A", <br>
+                    age: 15, <br>
+                    address: "HCM", <br>
+                    getName: function(){<br>
+                        return this.name //Dùng this vì tên obj có thể thay đổi<br>
+                    } <br>
+                } <br>
+                Để lấy được giá trị của phương thức: student.getName()
+            </p>
+        </div>
+        <!-- Object constructer-->
+         <div class="note__area">
+            <h1 class="note__title">⭐ Object constructure</h1>
+            <p class="note__content">
+                Object constructure giống như là 1 bảng thiết kế sẳn từ đó xây nên những object cho các đối tượng <br>
+                <br>
+                var User = function(name, age, email){ <br>
+                    this.name = name; <br>
+                    this.age = age; <br>
+                    this.email = email;<br>
+                    this.getName = function(){} <br>
+                } <br>
+                var admin = new User("Kha", 23, "khanguyen@gmail.com"); <br>
+                var user = new User("Nguyen", 20, "nguyennguyen@gmail.com"); <br>
+                <br>
+                <b>Có thể thêm property cho object mà ko sợ ảnh hưởng đến đối tượng khác</b> <br>
+                admin.title = "Đây là admin"; <br>
+                user.comment = "Hôm nay thời tiết tốt"; <br>
+                <br>
+                Có thể dùng <b>prototype</b> để thêm thuộc tính cho obj constructor nhưng sẽ thuộc tính này sẽ không nhận các thuộc tính được truyền vào của các đối tượng lúc khởi tạo  <br>
+                User.prototype.className = "F8"
+                <br><br>
+            </p>
+         </div>
+        <!-- Date Object -->
+        <div class="note__area">
+        <h1 class="note__title">⭐ Date Object</h1>
+        <p class="note__content">
+            var date = new Date() // nếu ko có new thì chỉ trả ra string vs ko thể truy suất phương thức của nó <br>
+            date.getFullYear() <br>
+            date.getMonth() + 1  //vì tháng từ 0-11 <br>
+            date.getDate() <br>
+        </p>
+        </div>
+        <!-- Math Object -->
+        <div class="note__area">
+        <h1 class="title">⭐ Math Object</h1>
+        <div class="note__content">
+            - Math.<b>PI</b> : trả về số pi đầy đủ <br>
+            - Math.<b>round()</b> : làm tròn số .49 thì thành 1 .5 thì thành 2 <br>
+            - Math.<b>abs()</b> : giá trị tuyệt đối <br>
+            - Math.<b>ceil()</b> : làm tròn lên 4,0001 thành 5 <br>
+            - Math.<b>floor()</b> : làm tròn dưới 4.9 thành 4 <br>
+            - Math.<b>random()</b> : 1 số thập phân ngẫu nhiên nhỏ hơn 1 <br>
+            Có thể kết hợp vs floor để random ra số ngẫu nhiên <br>
+            var random = Math.floor(Math.random() * 10) <br>
+            - Math.<b>min()</b> : in ra số nhỏ nhất <br>
+            - Math.<b>max()</b> : in ra số lớn nhất       
+        </div>
+        </div>
+        <!-- If-else -->
+         <div class="note__area">
+            <h1 class="note__title">⭐ If-else</h1>
+            <p class="note__content">
+                Chỉ cần 1 if thỏa mãn và thực thi thì sẽ ko làm những if còn lại <br>
+                <b>if</b>(điều kiện 1){ <br>
+                    câu lệnh 1 <br>
+                }<b>else if</b>(điều kiện 2){ <br>
+                    câu lệnh 2 <br>
+                }<b>else if</b>(điều kiện 3){<br>
+                    câu lệnh 3 <br>
+                }<b>else</b>{ <br>
+                    câu lệnh <br>
+                }
+            </p>
+         </div>
+        <!-- Switch -->
+        <div class="note__area"> 
+        <h1 class="note__title">⭐ Switch</h1>
+        <p class="note__content">
+            <b>switch</b>(điều kiện){ <br>
+                <b>case</b> điều kiện: <br>  
+                <b>break;</b> <br>
+                <b>case</b> điều kiện: <br>
+                <b>break;</b> <br>
+                <b>case</b> điều kiện: <br>
+                <b>break;</b>  <br>
+                <b>default:</b> <br>
+                câu lệnh; <br>
+            } <br>
+            - Nếu ko có break thì kể từ lúc case đúng các câu lệnh của các câu sau sẽ đều dc thực hiện <br>
+            - Câu lệnh default dùng cho các case còn lại <br>
+            - Nếu nhiều hơn 3 điều kiện có thể dùng switch case
+
+        </p>
+        </div>
+        <!-- Toán tử 3 ngôi -->
+         <div class="note__area">
+            <h1 class="note__title">⭐ Toán tử 3 ngôi(Ternary operator)</h1>
+            <p class="note__content">
+               var result = điều kiện <b>?</b> thực hiện nếu dk đúng 
+               <b>:</b> ngược lại thực hiện nếu điều kiện sai 
+            </p>
+         </div>
+        <!-- For -->
+         <div class="note__area">
+            <h1 class="note__title">⭐ For</h1>
+            <p class="note__content">
+                for(khai báo biến; điều kiện đúng; tăng biến){ <br>
+                    câu lệnh thực thi <br>
+                } <br><br>
+                <b>Ex:</b> <br>
+                for(var i = 1; i &lt;= 10; i++){ <br>
+                    console.log(i); //in ra i từ 1 đến 10<br>
+                } <br> <br>
+
+                <b>Ex:</b>Dùng vòng for để duyệt mảng và lấy ra giá trị của phần tử là obj <br>
+                var orders = [ <br>
+                    {<br>
+                        name: 'Khóa học HTML - CSS Pro',<br>
+                        price: 3000000<br>
+                    },<br>
+                    {<br>
+                        name: 'Khóa học Javascript Pro',<br>
+                        price: 2500000<br>
+                    },<br>
+                    {<br>
+                        name: 'Khóa học React Pro',<br>
+                        price: 3200000<br>
+                    }<br>
+                ]<br><br>
+                let getTotal = function(orders){<br>
+                    let total = 0;<br>
+                    let ordersLength = orders.length;<br>
+                    for(var i = 0; i < ordersLength; i++){<br>
+                        total += orders[i].price;<br>
+                    }<br>
+                    return total;<br>
+                }
+            </p>
+         </div>
+        <!-- For in -->
+        <div class="note__area">
+        <h1 class="note__title">⭐ For in</h1>
+        <p class="note__content">
+            <b>Thường dùng cho obj hoặc chuổi</b> <br>
+            Duyệt qua array, obj, chuổi và lấy ra lần lượt key(obj), index(array,chuổi) <br>
+            <b>Ex:</b>
+            let person { <br>
+                name: "Kha",<br>
+                age: 23,<br>
+                phone: "0909090"<br>
+            } <br>
+            <br>
+            for(var key in person){ //Duyệt qua obj(số lần duyệt tương ứng vs số key của obj) <br>
+                console.log(key + ":" + person[key]) //Dùng [] để lấy ra các value <br>
+            }
+        </p>
+        </div>
+        <!-- For of -->
+         <div class="note__area">
+            <h1 class="note__title">⭐ For of</h1>
+            <p class="note__content">
+                <b>Thường dùng cho array, chuổi hoặc biến đổi obj để dùng</b><br>
+                Duyệt qua array và lấy ra phần tử của mảng, lấy ra từng chữ cái của chuổi, lấy ra dc key, value của obj đã biến đổi <br>
+                <b>Ex:</b><br>
+                var myInfo = ["Kha", 23, "0990909090"] <br>
+                <br>
+                for(var value of myInfo){<br>
+                    console.log(value) // các phần tử của array
+                    <br>
+                } <br><br>
+                <b>Ex: Biến đổi obj mới dùng được</b><br>
+                Object.keys(person) //Lấy key <br>
+                Object.values(person) //lấy value <br>
+                <br>
+                for(var value of Object.keys(person)){<br>
+                    console.log(value) //duyệt qua và lấy từng value củ obj <br>
+                }
+            </p>
+         </div>
+        <!-- While -->
+         <div class="note__area">
+            <h1 class="note__title">⭐ While</h1>
+            <p class="note__content">
+                var languages = ['html', 'css', 'js']; <br>
+                <br>
+                var i = 0;<br>
+                while(i < languages.length){<br>
+                    console.log(languages[i]);<br>
+                    i++;<br>
+                }
+            </p>
+         </div>
+        <!-- Do While -->
+         <div class="note__area">
+            <h1 class="note__title">⭐Do While</h1>
+            <div class="note__content">
+                <b>Thực hiện trước 1 lần rồi mới kiểm tra điều kiện</b> <br>
+                <b>Ex:</b> <br>
+                var i = 0; <br>
+                var isSuccess = false;<br>
+                do{<br>
+                    i++; <br>
+                    console.log('Nạp thẻ lần: '+i); <br>
+
+                    if(true){<br>
+                        isSuccess = true;<br>
+                    {<br>
+                }while(!isSuccess && i <= 3)<br>
+                => Nếu lần đầu nạp thành công thì isSuccess là true <b>không</b> thỏa điều kiện while nên sẽ nạp lại 3 lần nữa
+            </div>
+         </div>
+        <!-- Break & Continue in loop -->
+         <div class="note__area">
+            <h1 class="note__title">⭐ Break & Continue in loop</h1>
+            <p class="note__content">
+                Break: dùng để thoát khỏi(dừng) vòng lặp. <br>
+                Continue: bỏ qua lần lặp hiện tại <br>
+                <b>Ex:</b>
+                for(var i = 0; i < 10; i++){<br>
+                    if(i%2 !== 0){<br>
+                        continue;<br>
+                    }<br>
+
+                    console.log(i)<br>
+                }<br>
+                => Khi các số lẻ / 2 sẽ có dư và sẽ bị bỏ qua vòng lặp
+            </p>
+         </div>
+        <!-- Nested loop  -->
+         <div class="note__area">
+            <h1 class="note__title">⭐ Nested loop (Vòng lặp lồng nhau)</h1>
+            <div class="note__content">
+                var arrNumber = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];<br>
+                for(var i = 0; i < arrNumber.length; i++){ <br>
+                    for(var j = 0; j < arrNumber[i].length; j++){ <br>
+                        console.log(arrNumber[i][j]) <br>
+                    }<br> 
+                }
+            </div>
+         </div>
     </div>
 <script src="./assets/js/main.js"></script>
 </body>
