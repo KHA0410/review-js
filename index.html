@@ -17,11 +17,39 @@
 <body>
     <header>
         <h1>Review JS</h1>
-    </header>
+        <div class="header__menu">
+            <div class="burger" onclick="openMenu()"><i class="fa fa-bars"></i></div>
 
+            <!-- Overlay -->
+            <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+          
+            <!-- Slide Menu -->
+            <div class="menu" id="menu">
+              <ul>
+                <li><a href="#catagory1">⭐ Cách dùng JS với HTML</a></li>
+                <li><a href="#catagory2">⭐ Kiểu dữ liệu trong JS</a></li>
+                <li><a href="#catagory3">⭐ Number</a></li>
+                <li><a href="#catagory4">⭐ String</a></li>
+                <li><a href="#catagory5">⭐ Toán tử số học (Arithmetic)</a></li>
+                <li><a href="#catagory6">⭐ Toán tử gán (Assignment)</a></li>
+                <li><a href="#catagory7">⭐ Toán tử ++ và --</a></li>
+                <li><a href="#catagory8">⭐ Toán tử so sánh (Comparison)</a></li>
+                <li><a href="#catagory9">⭐ Toán tử logic (Logical)</a></li>
+                <li><a href="#catagory10">⭐ Falsy</a></li>
+                <li><a href="#catagory11">⭐ Hàm (Function)</a></li>
+                <li><a href="#catagory12">⭐ Array</a></li>
+                <li><a href="#catagory13">⭐ Object</a></li>
+                <li><a href="#catagory14">⭐ Object constructor</a></li>
+                <li><a href="#catagory15">⭐ Date Object</a></li>
+                <li><a href="#catagory16">⭐ Math Object</a></li>             
+              </ul>
+            </div>
+        </div>
+    </header>
+    
     <div class="note">
         <!-- Cách dùng JS với HTML -->
-        <div class="note__area">
+        <div id="catagory1" class="note__area">
             <h1 class="note__title">⭐ Cách dùng JS với HTML</h1>
             <p class="note__content">
                 &lt;script src="đường dẫn file"&gt;<br>&lt;/script&gt;<br>
@@ -29,7 +57,7 @@
             </p>
         </div>
         <!-- Kiểu dữ liệu trong JS -->
-        <div class="note__area">
+        <div id="catagory2" class="note__area">
             <h1 class="note__title">⭐ Kiểu dữ liệu trong JS
             </h1>
             <p class="note__content">
@@ -48,7 +76,7 @@
             </p>
         </div>
         <!-- Number -->
-        <div class="note__area">
+        <div id="catagory3" class="note__area">
             <h1 class="note__title">⭐ Number</h1>
             <p class="note__content">
                 <b>isNaN()</b> để kiểm tra đối tượng <b>không</b> phải là số <br>
@@ -57,7 +85,7 @@
             </p>
         </div>
         <!-- String -->
-        <div class="note__area">
+        <div id="catagory4" class="note__area">
             <h1 class="note__title">⭐ String</h1>
             <p class="note__content">
                 + Sử dụng backslash <b>\</b> , <b>`${chuỗi}`</b><br>
@@ -74,7 +102,7 @@
             </p>
         </div>
         <!-- Toán tử số học -->
-        <div class="note__area">
+        <div id="catagory5" class="note__area">
             <h1 class="note__title">⭐ Toán tử số học(Arithmetic)
             </h1>
             <p class="note__content">
@@ -82,7 +110,7 @@
             </p>
         </div>
         <!-- Toán tử gán -->
-        <div class="note__area">
+        <div id="catagory6" class="note__area">
             <h1 class="note__title">⭐ Toán tử gán(Assignment)
             </h1>
             <p class="note__content">
@@ -90,7 +118,7 @@
             </p>
         </div>
         <!-- Toán tử ++ và -- -->
-        <div class="note__area">
+        <div id="catagory7" class="note__area">
             <h1 class="note__title">⭐ Toán tử ++ và --
             </h1>
             <p class="note__content">
@@ -103,7 +131,7 @@
             </p>
         </div>
         <!-- Toán tử so sánh -->
-        <div class="note__area">
+        <div id="catagory8" class="note__area">
             <h1 class="note__title">⭐ Toán tử so sánh(Comparison)
             </h1>
             <p class="note__content">
@@ -112,7 +140,7 @@
             </p>
         </div>
         <!-- Toán tử logic -->
-        <div class="note__area">
+        <div id="catagory9" class="note__area">
             <h1 class="note__title">⭐ Toán tử logic(Logical)
             </h1>
             <p class="note__content">
@@ -122,7 +150,7 @@
             </p>
         </div>
         <!-- Falsy -->
-        <div class="note__area">
+        <div id="catagory10" class="note__area">
             <h1 class="note__title">⭐ Falsy
             </h1>
             <p class="note__content">
@@ -136,7 +164,7 @@
             </p>
         </div>
         <!-- Hàm -->
-        <div class="note__area">
+        <div id="catagory11" class="note__area">
             <h1 class="note__title">⭐ Hàm (Function)</h1>
             <p class="note__content">
                 <strong>Có 2 loại là hàm built-in(được js định nghĩa sẳn) và hàm tự định nghĩa</strong> <br>
@@ -177,7 +205,7 @@
                 <b>Note: </b>Cơ chế hosting là gọi hàm trc cả khi nó được định nghĩa
         </div>
         <!-- Array -->
-        <div class="note__area">
+        <div id="catagory12" class="note__area">
             <h1 class="note__title">⭐ Array
             </h1>
             <p class="note__content">
@@ -201,7 +229,7 @@
             </p>
         </div>
         <!-- Object -->
-        <div class="note__area">
+        <div id="catagory13" class="note__area">
             <h1 class="note__title">⭐ Object</h1>
             <p class="note__content">
                 Object được tạo nên từ 1 hoặc nhiều cặp <b>key</b> và <b>value</b>, hàm trong obj gọi là <b>phương thức(method)</b>, còn lại gọi là <b>thuộc tính(property)</b></b> <br>
@@ -234,7 +262,7 @@
             </p>
         </div>
         <!-- Object constructer-->
-         <div class="note__area">
+         <div id="catagory14" class="note__area">
             <h1 class="note__title">⭐ Object constructure</h1>
             <p class="note__content">
                 Object constructure giống như là 1 bảng thiết kế sẳn từ đó xây nên những object cho các đối tượng <br>
@@ -258,7 +286,7 @@
             </p>
          </div>
         <!-- Date Object -->
-        <div class="note__area">
+        <div id="catagory15" class="note__area">
         <h1 class="note__title">⭐ Date Object</h1>
         <p class="note__content">
             var date = new Date() // nếu ko có new thì chỉ trả ra string vs ko thể truy suất phương thức của nó <br>
@@ -268,7 +296,7 @@
         </p>
         </div>
         <!-- Math Object -->
-        <div class="note__area">
+        <div id="catagory16" class="note__area">
         <h1 class="title">⭐ Math Object</h1>
         <div class="note__content">
             - Math.<b>PI</b> : trả về số pi đầy đủ <br>
@@ -284,7 +312,7 @@
         </div>
         </div>
         <!-- If-else -->
-         <div class="note__area">
+         <div id="catagory17" class="note__area">
             <h1 class="note__title">⭐ If-else</h1>
             <p class="note__content">
                 Chỉ cần 1 if thỏa mãn và thực thi thì sẽ ko làm những if còn lại <br>
@@ -300,7 +328,7 @@
             </p>
          </div>
         <!-- Switch -->
-        <div class="note__area"> 
+        <div id="catagory18" class="note__area"> 
         <h1 class="note__title">⭐ Switch</h1>
         <p class="note__content">
             <b>switch</b>(điều kiện){ <br>
@@ -320,7 +348,7 @@
         </p>
         </div>
         <!-- Toán tử 3 ngôi -->
-         <div class="note__area">
+         <div id="catagory19" class="note__area">
             <h1 class="note__title">⭐ Toán tử 3 ngôi(Ternary operator)</h1>
             <p class="note__content">
                var result = điều kiện <b>?</b> thực hiện nếu dk đúng 
@@ -328,7 +356,7 @@
             </p>
          </div>
         <!-- For -->
-         <div class="note__area">
+         <div id="catagory20" class="note__area">
             <h1 class="note__title">⭐ For</h1>
             <p class="note__content">
                 for(khai báo biến; điều kiện đúng; tăng biến){ <br>
@@ -466,6 +494,22 @@
             </div>
          </div>
     </div>
+
+    <script>
+        const menu = document.getElementById('menu');
+        const overlay = document.getElementById('overlay');
+    
+        function openMenu() {
+          menu.classList.add('open');
+          overlay.classList.add('show');
+        }
+    
+        function closeMenu() {
+          menu.classList.remove('open');
+          overlay.classList.remove('show');
+        }
+      </script>
+    
 <script src="./assets/js/main.js"></script>
 </body>
 </html>
