@@ -42,6 +42,16 @@
                 <li><a href="#catagory14">⭐ Object constructor</a></li>
                 <li><a href="#catagory15">⭐ Date Object</a></li>
                 <li><a href="#catagory16">⭐ Math Object</a></li>             
+                <li><a href="#catagory17">⭐ If-else</a></li>             
+                <li><a href="#catagory18">⭐ Switch</a></li>             
+                <li><a href="#catagory19">⭐ Toán tử 3 ngôi(Ternary operator)</a></li>             
+                <li><a href="#catagory20">⭐ For</a></li>             
+                <li><a href="#catagory21">⭐ For in</a></li>             
+                <li><a href="#catagory22">⭐ For of</a></li>             
+                <li><a href="#catagory23">⭐ While</a></li>             
+                <li><a href="#catagory24">⭐ Do While</a></li>             
+                <li><a href="#catagory25">⭐ Break & Continue in loop</a></li>             
+                <li><a href="#catagory26">⭐ Nested loop (Vòng lặp lồng nhau)</a></li>             
               </ul>
             </div>
         </div>
@@ -227,6 +237,61 @@
                 11. languages.<b>concat(languages2)</b> nối mảng languages2 vào languages <br>
                 12. languages.<b>slice(index, số phần tử muốn cắt)</b> Lấy ra 1 or nhiều phần tử, có thể cắt từ cuối lên bằng cách truyền số âm. Ngoài ra có thể truyền 0 để copy toàn bộ các phần tử của mảng </b>
             </p>
+            <h1 class="note__title">⭐ Array method</h1>
+            <p class="note__content">
+                <b>Dùng các phương thức này cần phải truyền 1 hàm vào làm đối số -> đó là callback function <br>
+                </b>
+                var courses = [ <br>
+                {<br>
+                    id: 1, <br>
+                    name: "HTML, CSS",<br>
+                    coin: 0<br>
+                },<br>
+                {<br>
+                    id: 2, <br>
+                    name: "JS",<br>
+                    coin: 100<br>
+                },<br>
+                {<br>
+                    id: 3,<br> 
+                    name: "React",<br>
+                    coin: 200<br>
+                }<br>
+            ]<br>
+            <br>
+            <b>forEach()</b>: Duyệt qua mảng lấy ra các đối tượng bên trong và có thể lấy ra index của chúng <br>
+            <b>Ex:</b><br>
+            courses.forEach(function(course, index){<br>
+                console.log(index, course);<br>
+            });<br>
+            <br>
+            <b>every()</b>: Duyệt qua và kiểu tra xem <b>tất cả các đối tượng</b> có thỏa kiều kiện nào đó không => return boolean <br>
+            <b>Ex:</b><br>
+            var isFree = courses.every((course, index)=>{<br>
+                return course.coin === 0;<br>
+            })<br><br>
+            <b>some()</b>: Duyệt qua các phần tử <b>chỉ cần 1 phần tử</b> thỏa mãn điều kiện => return boolean <br><br>
+            <b>find()</b>: Duyệt qua và tìm ra 1 phần tử thỏa mãn, nếu <b>không</b> tìm thấy => return undefined <br>
+            <b>Ex:</b><br>
+            var isFind = courses.find((course, index)={ <br>
+                return course.name === "React"; <br>
+            }) <br><br>
+            <b>filter()</b>: Duyệt qua aray và tìm ra tất cả các phần tử thỏa mãn điều kiện <br>
+            <b>Ex:</b><br>
+            var isFilter = courses.filter((course, index)=>{ <br>
+                return course.name === "Ruby";<br>
+            }) <br><br>
+            <b>map()</b>: Duyệt qua các phần tử của mảng và trả ra mảng mới, có thể chỉnh sửa mảng mới này. Method này còn có thể return ra html ứng dụng mạnh mẽ trong render giao diện <br>
+            <b>Ex:</b><br>
+            var isMap = courses.map((course, index)=>{<br>
+                return {<br>
+                    id: course.id, <br>
+                    name: course.name,<br>
+                    coin: course.coin,<br>
+                    coinText: `Gía: ${course.coin}`<br>
+                }<br>
+            })
+            </p>
         </div>
         <!-- Object -->
         <div id="catagory13" class="note__area">
@@ -393,7 +458,7 @@
             </p>
          </div>
         <!-- For in -->
-        <div class="note__area">
+        <div id="catagory21" class="note__area">
         <h1 class="note__title">⭐ For in</h1>
         <p class="note__content">
             <b>Thường dùng cho obj hoặc chuổi</b> <br>
@@ -411,7 +476,7 @@
         </p>
         </div>
         <!-- For of -->
-         <div class="note__area">
+         <div id="catagory22" class="note__area">
             <h1 class="note__title">⭐ For of</h1>
             <p class="note__content">
                 <b>Thường dùng cho array, chuổi hoặc biến đổi obj để dùng</b><br>
@@ -433,7 +498,7 @@
             </p>
          </div>
         <!-- While -->
-         <div class="note__area">
+         <div id="catagory23" class="note__area">
             <h1 class="note__title">⭐ While</h1>
             <p class="note__content">
                 var languages = ['html', 'css', 'js']; <br>
@@ -446,7 +511,7 @@
             </p>
          </div>
         <!-- Do While -->
-         <div class="note__area">
+         <div id="catagory24" class="note__area">
             <h1 class="note__title">⭐Do While</h1>
             <div class="note__content">
                 <b>Thực hiện trước 1 lần rồi mới kiểm tra điều kiện</b> <br>
@@ -465,7 +530,7 @@
             </div>
          </div>
         <!-- Break & Continue in loop -->
-         <div class="note__area">
+         <div id="catagory25" class="note__area">
             <h1 class="note__title">⭐ Break & Continue in loop</h1>
             <p class="note__content">
                 Break: dùng để thoát khỏi(dừng) vòng lặp. <br>
@@ -482,7 +547,7 @@
             </p>
          </div>
         <!-- Nested loop  -->
-         <div class="note__area">
+         <div id="catagory26" class="note__area">
             <h1 class="note__title">⭐ Nested loop (Vòng lặp lồng nhau)</h1>
             <div class="note__content">
                 var arrNumber = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];<br>

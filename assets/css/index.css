@@ -66,8 +66,8 @@ header{
   .menu {
     position: fixed;
     top: 0;
-    right: -50vw; /* Ẩn ban đầu */
-    width: 50vw;
+    right: -80vw; /* Ẩn ban đầu */
+    width: 80vw;
     height: 100vh;
     background-color: #333;
     color: white;

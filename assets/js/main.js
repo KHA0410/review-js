@@ -237,3 +237,70 @@ for(var i = 0; i < arrNumber.length; i++){
         console.log(arrNumber[i][j])
     }
 }
+
+var courses = [
+    {
+        id: 1, 
+        name: "HTML, CSS",
+        coin: 0
+    },
+    {
+        id: 2, 
+        name: "JS",
+        coin: 100
+    },
+    {
+        id: 3, 
+        name: "React",
+        coin: 200
+    },
+    {
+        id: 4, 
+        name: "NodeJS",
+        coin: 300
+    },
+    {
+        id: 5, 
+        name: "Ruby",
+        coin: 400
+    },
+    {
+        id: 6, 
+        name: "Ruby",
+        coin: 600
+    },
+]
+
+courses.forEach((course, index) => {
+    console.log("forEach",index, course)
+})
+
+var isFree = courses.every((course, index) => {
+    console.log(index)
+    return course.coin === 0;
+})
+
+console.log(isFree)
+
+var isFind = courses.find((course, index) => {
+    return course.name === "React";
+})
+
+console.log(isFind)
+
+var isFilter = courses.filter((course, index) => {
+    return course.name == "Ruby";
+})
+console.log(isFilter)
+
+var isMap = courses.map((course, key) => {
+    return {
+        id: course.id, 
+        name: course.name,
+        coin: course.coin,
+        coinText: `Gía: ${course.coin}`,
+        originArray: course
+    }
+})
+
+console.log(isMap)
