@@ -69,14 +69,14 @@ header{
     right: -80vw; /* Ẩn ban đầu */
     width: 80vw;
     height: 100vh;
-    background-color: #333;
+    background-color: var(--color-seconary);
     color: white;
-    padding: 20px;
     transition: right 0.3s ease;
     z-index: 3;
     overflow: scroll;
     text-align: start;
     font-size: 1.5rem;
+    padding: 1.5rem 0 4rem 1.5rem ;
   }
 
   .menu ul {
@@ -90,7 +90,15 @@ header{
 
   .menu li a{
     text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.3s ease-in-out;
+  }
+
+  .menu li a:hover{
     color: white;
+    background: #7c7b76;
+    padding-left: 1rem;
   }
 
   .menu.open {
