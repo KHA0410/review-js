@@ -239,7 +239,14 @@
             </p>
             <h1 class="note__title">⭐ Array method</h1>
             <p class="note__content">
-                <b>Dùng các phương thức này cần phải truyền 1 hàm vào làm đối số -> đó là callback function <br>
+                <b>forEach()</b><br>
+                <b>every()</b><br>
+                <b>some()</b><br>
+                <b>find()</b><br>
+                <b>filter()</b><br>
+                <b>map()</b><br>
+                <b>reduce()</b><br><br>
+                <b>Note: Dùng các phương thức này cần phải truyền 1 hàm vào làm đối số -> đó là callback function <br>
                 </b>
                 var courses = [ <br>
                 {<br>
@@ -290,8 +297,24 @@
                     coin: course.coin,<br>
                     coinText: `Gía: ${course.coin}`<br>
                 }<br>
-            })
-            </p>
+            }) <br><br>
+            <b>reduce()</b>: Duyệt qua array và tính tổng của các đồi tượng, số lần lặp tương ứng vs số lượng phần tử của mảng<br>
+            <b>Ex: Cách dùng đơn giản</b><br>
+            var isReduce = courses.reduce((total, course)=>{ <br>
+                return total + course.coin; <br>
+            }, 0); // 0 ở đây là giá trị ban đầu của total<br>
+            <br>
+            <b>Ex: Cách dùng nâng cao</b><br>
+            <b>initial value:</b> Gía trị khởi tạo ban đầu <br>
+            <b>accumulator:</b> Biến lưu trữ(initial value sẽ gán cho biến này) <br>
+            <b>currentValue:</b> Gía trị hiện tại <br>
+            <b>currentIndex: </b> Chỉ mục của currentValue <br>
+            <b>OriginArray: </b> Là mảng ban đầu <br>
+            <br>
+            var totalCoin = courses.reduce((accumulator, currentValue, currentIndex), OriginArray=>{ <br>
+                return accumulator + currentValue.coin; <br>
+            }, 0);
+
         </div>
         <!-- Object -->
         <div id="catagory13" class="note__area">

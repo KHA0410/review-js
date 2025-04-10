@@ -66,8 +66,8 @@ header{
   .menu {
     position: fixed;
     top: 0;
-    right: -80vw; /* Ẩn ban đầu */
-    width: 80vw;
+    right: -50vw; /* Ẩn ban đầu */
+    width: 50vw;
     height: 100vh;
     background-color: var(--color-seconary);
     color: white;
@@ -99,6 +99,8 @@ header{
     color: white;
     background: #7c7b76;
     padding-left: 1rem;
+    font-weight: 600;
+    font-size: 1.8rem;
   }
 
   .menu.open {
@@ -129,4 +131,11 @@ header{
     padding: 2rem;
     line-height: 3rem;
     font-size: 1.3rem;
+}
+
+@media (max-width: 750px) {
+  .menu {
+    right: -80vw;
+    width: 80vw;
+  }
 }

@@ -304,3 +304,9 @@ var isMap = courses.map((course, key) => {
 })
 
 console.log(isMap)
+
+var isReduce = courses.reduce((course, index)=>{
+    return course + index.coin
+}, 0)
+
+console.log(isReduce)
